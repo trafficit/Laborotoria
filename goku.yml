@@ -10,9 +10,9 @@
     ansible_winrm_transport: plaintext
     ansible_winrm_scheme: http
   tasks:
-  - name: Activate windows
-    win_shell: cscript slmgr.vbs /rearm
-    args:
-      chdir: C:\Windows\System32\
-  roles:
-    - role: promotedc
+#  - name: Activate windows
+##    win_shell: cscript slmgr.vbs /rearm
+#    args:
+#      chdir: C:\Windows\System32\
+#  roles:
+#    - role: promotedc

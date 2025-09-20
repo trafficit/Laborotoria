@@ -8,12 +8,12 @@
   register: dns_setup
 
 # Make sure RDP is on
-- include: enable_rdp.yml
+- include_tasks: enable_rdp.yml
 
 #  Setup the firewall
-- include: firewall_445.yml
+- include_tasks: firewall_445.yml
 
-- include: firewall_3389.yml
+- include_tasks: firewall_3389.yml
 
 - name: Join the capsulecorp.local domain
   win_domain_membership:

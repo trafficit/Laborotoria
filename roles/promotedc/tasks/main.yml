@@ -2,21 +2,21 @@
   - name: Enable Remote Desktop
     raw: reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f
 
-  - name: Make sure admin user is set
-    win_user:
-     name: Administrator
-     password: PassW0rd432!
-     state: present
-     groups:
-      - Administrators
-
-  - name: Install Active Directory Services
-    win_feature: >
-      name=AD-Domain-Services
-      include_management_tools=yes
-      include_sub_features=yes
-      state=present
-
+#  - name: Make sure admin user is set
+##    win_user:
+##     name: Administrator
+##     password: PassW0rd432!
+##     state: present
+##     groups:
+##      - Administrators
+##
+#  - name: Install Active Directory Services
+#    win_feature: >
+#      name=AD-Domain-Services
+#      include_management_tools=yes
+#      include_sub_features=yes
+#      state=present
+#
   - name: Ensure the domain exists
     win_domain:
       dns_domain_name: capsulecorp.local
@@ -63,5 +63,5 @@
       groups:
         - Domain Admins
 
-  - include: accounts.yml
+  - include_tasks: accounts.yml
 

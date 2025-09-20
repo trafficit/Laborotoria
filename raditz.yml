@@ -9,7 +9,7 @@
     anpt_flag: "flag3.txt"
   tasks:
   - name: Activate windows
-    win_shell: cscript slmgr.vbs /rearm
+#    win_shell: cscript slmgr.vbs /rearm
     args:
       chdir: C:\Windows\System32\
   roles:

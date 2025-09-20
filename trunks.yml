@@ -8,12 +8,12 @@
     ethernet_adapter: "Ethernet"
     anpt_flag: "flag1.txt"
   tasks:
-  - name: Activate windows
-    win_shell: cscript slmgr.vbs /rearm
-    args:
-      chdir: C:\Windows\System32\
-  roles:
-    - role: java
-    - role: tomcat
-    - role: placeflag
-    - role: joindomain
+#  - name: Activate windows
+##    win_shell: cscript slmgr.vbs /rearm
+#    args:
+#      chdir: C:\Windows\System32\
+#  roles:
+#    - role: java
+#    - role: tomcat
+#    - role: placeflag
+#    - role: joindomain

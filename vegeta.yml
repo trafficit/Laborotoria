@@ -8,10 +8,10 @@
     jenkins_hostname: vegeta.capsulecorp.local
     ethernet_adapter: "Ethernet"
   tasks:
-  - name: Activate windows
-    win_shell: cscript slmgr.vbs /rearm
-    args:
-      chdir: C:\Windows\System32\
-  roles:
-   - role: jenkins
-   - role: joindomain
+#  - name: Activate windows
+##    win_shell: cscript slmgr.vbs /rearm
+#    args:
+#      chdir: C:\Windows\System32\
+#  roles:
+#   - role: jenkins
+#   - role: joindomain

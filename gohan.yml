@@ -7,10 +7,10 @@
     capsulecorp_domain_hostname: "gohan"
     ethernet_adapter: "Ethernet"
   tasks:
-  - name: Activate windows
-    win_shell: cscript slmgr.vbs /rearm
-    args:
-      chdir: C:\Windows\System32\
-  roles:
-    - role: mssql
-    - role: joindomain
+#  - name: Activate windows
+##    win_shell: cscript slmgr.vbs /rearm
+#    args:
+#      chdir: C:\Windows\System32\
+#  roles:
+#    - role: mssql
+#    - role: joindomain
